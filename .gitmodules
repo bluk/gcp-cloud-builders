@@ -1,0 +1,4 @@
+[submodule "swift-build-tools"]
+	path = swift-build-tools
+	url = git@github.com:bluk/docker-swift-build-tools.git
+	branch = master
