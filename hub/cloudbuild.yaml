@@ -1,0 +1,21 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args:
+    - 'build'
+    - '-t'
+    - 'gcr.io/$PROJECT_ID/hub'
+    - '-t'
+    - 'gcr.io/$PROJECT_ID/hub:${_HUB_VERSION}'
+    - '--build-arg'
+    - 'HUB_VERSION=${_HUB_VERSION}'
+    - '--build-arg'
+    - 'HUB_SHA256SUM=${_HUB_SHA256SUM}'
+    - '.'
+
+substitutions:
+  _HUB_VERSION: 2.5.1
+  _HUB_SHA256SUM: eee7cb455e1ab34aa3b1eb4afe0f44a31af70cf4d3289fad4e124c7c0cc7016d
+
+images:
+  - 'gcr.io/$PROJECT_ID/hub:latest'
+  - 'gcr.io/$PROJECT_ID/hub:${_HUB_VERSION}'
