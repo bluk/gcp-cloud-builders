@@ -1,8 +1,6 @@
 # Cloud Builders
 
-[![Apache-2.0 License](https://img.shields.io/github/license/bluk/gcp-cloud-builders.svg)](https://github.com/bluk/gcp-cloud-builders/blob/master/LICENSE)
-
-Contains unsupported [Google Cloud Build](https://cloud.google.com/cloud-build/)
+Contains unsupported [Google Cloud Build][google-cloud-build]
 image definitions.
 
 ## Getting Started
@@ -45,10 +43,15 @@ image definitions.
 
 ## Related Links
 
-* [Google Cloud Build](https://cloud.google.com/cloud-build/)
-* [Supported Cloud Builders](https://github.com/GoogleCloudPlatform/cloud-builders)
-* [Cloud Builders Community](https://github.com/GoogleCloudPlatform/cloud-builders-community)
+* [Google Cloud Build][google-cloud-build]
+* [Supported Cloud Builders][supported-cloud-builders]
+* [Cloud Builders Community][community-cloud-builders]
 
 ## License
 
-[Apache-2.0 License](https://github.com/bluk/gcp-cloud-builders/blob/master/LICENSE)
+[Apache-2.0 License][license]
+
+[license]: LICENSE
+[google-cloud-build]: https://cloud.google.com/cloud-build/
+[supported-cloud-builders]: https://github.com/GoogleCloudPlatform/cloud-builders
+[community-cloud-builders]: https://github.com/GoogleCloudPlatform/cloud-builders-community

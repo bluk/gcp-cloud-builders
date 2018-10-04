@@ -4,8 +4,7 @@
 
 By submitting a pull request, you represent that you have the right to license
 your contribution to the community, and agree by submitting the patch
-that your contributions are licensed under the [Apache-2.0
-license](https://github.com/bluk/gcp-cloud-builders/blob/master/LICENSE).
+that your contributions are licensed under the [Apache-2.0 license][license]
 
 ## Pull Requests
 
@@ -16,5 +15,7 @@ test to reproduce the issue.
 ## Security
 
 If there is a security issue, please email security@bryantluk.com . You can
-use this [PGP public key](https://bryantluk.com/gpg.key) to encrypt any message
-if desired.
+use this [PGP public key][gpg-key] to encrypt any message if desired.
+
+[license]: LICENSE
+[gpg-key]: https://bryantluk.com/gpg.key
