@@ -38,9 +38,9 @@ steps:
   args:
     - 'tag'
     - 'gcr.io/$PROJECT_ID/swift:4'
-    - 'gcr.io/$PROJECT_ID/swift:4.2.0'
+    - 'gcr.io/$PROJECT_ID/swift:4.2.1'
   wait_for: ['4']
-  id: '4.2.0'
+  id: '4.2.1'
 
 # Test latest
 - name: 'gcr.io/cloud-builders/docker'
@@ -56,4 +56,4 @@ images:
 - 'gcr.io/$PROJECT_ID/swift:latest'
 - 'gcr.io/$PROJECT_ID/swift:4'
 - 'gcr.io/$PROJECT_ID/swift:4.2'
-- 'gcr.io/$PROJECT_ID/swift:4.2.0'
+- 'gcr.io/$PROJECT_ID/swift:4.2.1'
