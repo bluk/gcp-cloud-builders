@@ -23,24 +23,24 @@
 #
 FROM ubuntu:18.04
 
-# Install related packages and set LLVM 3.8 as the compiler
+# Install related packages
 RUN apt-get -q update && \
     DEBIAN_FRONTEND=noninteractive apt-get -q install -y \
-    make \
-    libc6-dev \
-    clang-6.0 \
-    curl \
-    libedit-dev \
-    libpython2.7 \
+    clang \
     libicu-dev \
+    libpython2.7 \
+    # Tools to download tools
+    curl \
+    git \
+    # Optional but may be required by Swift packages
+    libc6-dev \
+    libcurl4-openssl-dev \
+    libedit-dev \
     libssl-dev \
     libxml2 \
-    tzdata \
-    git \
-    libcurl4-openssl-dev \
+    make \
     pkg-config \
-    && update-alternatives --quiet --install /usr/bin/clang clang /usr/bin/clang-6.0 100 \
-    && update-alternatives --quiet --install /usr/bin/clang++ clang++ /usr/bin/clang++-6.0 100 \
+    tzdata \
     && rm -r /var/lib/apt/lists/*
 
 # Everything up to here should cache nicely between Swift versions, assuming dev dependencies change little
