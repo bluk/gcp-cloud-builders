@@ -2,3 +2,7 @@
 	path = swift-build-tools
 	url = git@github.com:bluk/docker-swift-build-tools.git
 	branch = master
+[submodule "foundationdb-build-tools"]
+	path = foundationdb-build-tools
+	url = git@github.com:bluk/docker-foundationdb-build-tools.git
+	branch = master
