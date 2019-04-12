@@ -2,45 +2,45 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args:
     - 'build'
-    - '--file=Dockerfile-4'
-    - '--tag=gcr.io/$PROJECT_ID/swift:4'
+    - '--file=Dockerfile-5'
+    - '--tag=gcr.io/$PROJECT_ID/swift:5'
     - '.'
-  id: '4'
+  id: '5'
 
 # Test versions
 - name: 'gcr.io/cloud-builders/docker'
   args:
     - 'run'
     - '--rm'
-    - 'gcr.io/$PROJECT_ID/swift:4'
+    - 'gcr.io/$PROJECT_ID/swift:5'
     - 'swift'
     - '--version'
-  wait_for: ['4']
+  wait_for: ['5']
 
 # Tag versions
 - name: 'gcr.io/cloud-builders/docker'
   args:
     - 'tag'
-    - 'gcr.io/$PROJECT_ID/swift:4'
+    - 'gcr.io/$PROJECT_ID/swift:5'
     - 'gcr.io/$PROJECT_ID/swift'
-  wait_for: ['4']
+  wait_for: ['5']
   id: 'latest'
 
 - name: 'gcr.io/cloud-builders/docker'
   args:
     - 'tag'
-    - 'gcr.io/$PROJECT_ID/swift:4'
-    - 'gcr.io/$PROJECT_ID/swift:4.2'
-  wait_for: ['4']
-  id: '4.2'
+    - 'gcr.io/$PROJECT_ID/swift:5'
+    - 'gcr.io/$PROJECT_ID/swift:5.0'
+  wait_for: ['5']
+  id: '5.0'
 
 - name: 'gcr.io/cloud-builders/docker'
   args:
     - 'tag'
-    - 'gcr.io/$PROJECT_ID/swift:4'
-    - 'gcr.io/$PROJECT_ID/swift:4.2.1'
-  wait_for: ['4']
-  id: '4.2.1'
+    - 'gcr.io/$PROJECT_ID/swift:5'
+    - 'gcr.io/$PROJECT_ID/swift:5.0.0'
+  wait_for: ['5']
+  id: '5.0.0'
 
 # Test latest
 - name: 'gcr.io/cloud-builders/docker'
@@ -54,6 +54,6 @@ steps:
 
 images:
 - 'gcr.io/$PROJECT_ID/swift:latest'
-- 'gcr.io/$PROJECT_ID/swift:4'
-- 'gcr.io/$PROJECT_ID/swift:4.2'
-- 'gcr.io/$PROJECT_ID/swift:4.2.1'
+- 'gcr.io/$PROJECT_ID/swift:5'
+- 'gcr.io/$PROJECT_ID/swift:5.0'
+- 'gcr.io/$PROJECT_ID/swift:5.0.0'
